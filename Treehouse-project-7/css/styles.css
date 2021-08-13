@@ -35,10 +35,12 @@ Header Styles/
     margin-right:10px;
 }
 
-.header-info {
-display:flex;
-justify-content: center;
+.col-2{
+    display: flex;
+    justify-content:flex-end;
 }
+
+
 
 p.header-info{
     font-weight: lighter;
@@ -54,11 +56,18 @@ p.header-info{
 
 .member{
     border-radius: 50%;
-    height: 45px;
-    margin-top:12px;
-    margin-left: 12px;
-    position: relative;
-    float: left;
+    height: 35px;
+    margin:15px 2px 0 5px;
+}
+
+.line.divider{
+    border-right: 1px solid white;
+    height: 50px; 
+    margin: 10px 0 10px 8px;
+}
+
+.hidden{
+    display: none;
 }
 
 /*////////////
@@ -84,6 +93,7 @@ p.header-info{
 
 }
 
+
  .headline{
      margin-bottom: 35px;
      font-weight: normal;
@@ -94,8 +104,6 @@ p.header-info{
     border-radius: 5px;
     background-color: rgb(116, 119, 191);
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 0 5px;
 }
 
@@ -105,7 +113,7 @@ p.header-info{
 }
 
 .closeBtn /*Alert Button*/ {
-    margin-left: 35px;
+    margin:10px 0 0 35px;
     cursor: pointer;
     font-size: 20px;
     transition: 0.3s;
@@ -118,9 +126,9 @@ p.header-info{
 }
 
 .traffic-nav{
-    padding-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    padding:0;
+    margin:0;
+
 }
 
 .traffic-header{
@@ -163,9 +171,6 @@ p.header-info{
     margin: 0;
 }
 
-.mobile{
-    width: 80%;
-}
 
 .social-image{
 display: flex;
@@ -488,15 +493,15 @@ main{
 }
 
 .col-1{
-    border-right: 1px solid #fff;
-    height: 50px;
     padding-right: 12px;
     margin: 12px 0;
     display: flex;
+    justify-self: left;
 }
 
 .bell{
-    margin-top: 12px;
+    margin-top: 25px;
+    display: inline-block;
     
 }
 
@@ -504,12 +509,6 @@ main{
     transition: 0.4s;
     transform: rotate(7deg); 
 }
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 /*//////////////////////// 
 ////Media Quiries /////////////////////////*/
 
@@ -521,25 +520,152 @@ main{
            "nav main";
         }
 
-    .social-grid-container{
-        display: inline-flex;
-        width: 290px;
-    }
+        main {
+            display: grid;
+            grid-template-columns: 50%;
+          }
+          
+          .closeBtn /*Alert Button*/ {
+            margin:10px 0 0 60%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.3s;
+        }
 
-    
-    .members-line{
-        margin: 50px;
-        color: lightgray;
-    }
-    
-    .members-container, .recent-activity-container{
-        float: left;
-    }
+          .main-header,
+          .traffic,
+          .alert,
+          .social, 
+          .members, 
+          .recent-activity,
+          .message,
+          .settings,
+          hr {
+            width: 100%;
+            grid-column: 1 / span 2;
+          }
 
-    .members-text{
-       text-align: left;
-    }
+          .daily h3,
+          .mobile h3,
+          .social h3,
+          .members h3,
+          .recent-activity h3,
+          .message h3,
+          .settings h3 {
+          display: flex;
+          padding: 0 0 15px 10px;
+          margin: 0;
+}
 
+          .traffic-nav{
+              margin: 0 0 0 390px;
+          }
+
+          .daily {
+            grid-column: 1 / span 1;
+          }
+          
+          .daily + hr {
+            display: none;
+          }
+          
+          .mobile {
+            grid-column: 2 / span 1;
+          }
+
+
+          .social-grid-container{
+            display: inline-flex;
+            width: 230px;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .members-container{
+            display: flex;
+            justify-self: start;
+            padding-left:10px ;
+        }
+
+        .members-text, a{
+            text-align: left;
+            margin: 0;
+            padding: 5px 0 0 10px;
+        }
+
+        .recent-activity-container{
+            display: flex;
+            justify-self: start;
+            padding-left:10px ;
+        }
+
+        input{
+            width: 700px;
+            height: 35px;
+            margin-top: 12px;
+        }
+        textarea{
+            width: 700px;
+            height: 150px;
+            margin: 12px 0; 
+        }
+
+        .button-send{
+            width: 700px;
+            height: 40px;
+        }
+
+        select.dropdown{
+            width: 700px;
+            height: 40px;
+            margin: 10px 0;
+        }
+
+        .button-save,
+        .button-disabled-cancel{
+            width: 350px;
+            height: 45px;
+        }
+
+        .toggle-one{
+            position: absolute;
+            top: 217%;
+            left: 30%;
+          }
+          
+          .toggle-two{
+            position: absolute;
+            top: 222%;
+            left: 30%;
+          }
+        
+          .text-toggle{
+              display: flex;
+              font-size: 13px;
+              padding-bottom: 20px;
+          }
+        
+          .settings-text{
+              padding-bottom: 20px;
+          }
+
+          .member{
+            border-radius: 50%;
+            height: 45px;
+            margin:15px 12px 0 12px;
+        }
+
+        .daily.divider{
+            border-right: 1px solid grey;
+            height: 220px;
+          }
+        
+        .line.divider{
+            border-right: 1px solid white;
+            height: 50px; 
+            margin: 12px 0 12px 15px;
+        }
     
     }
 
@@ -550,27 +676,156 @@ main{
         grid-template-columns: 50%;
     }
 
-    .traffic, .social{
-        grid-column: 1 / span 2;
+    .closeBtn /*Alert Button*/ {
+        margin:10px 0 0 70%;
+        cursor: pointer;
+        font-size: 20px;
+        transition: 0.3s;
     }
 
-    .daily, .members, .message{
-        grid-column: 1 / span 1;
-    }
-    .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
-        } 
-        .widget-container-full, .widget-container-half {
-            width: 95vw;
+    .main-header,
+          .traffic,
+          .alert,
+          .social {
+            width: 100%;
+            grid-column: 1 / span 2;
+          }
+
+            .daily h3,
+            .mobile h3,
+            .social h3,
+            .members h3,
+            .recent-activity h3,
+            .message h3,
+            .settings h3 {
+            display: flex;
+            padding: 0 0 15px 10px;
+            margin: 0;
+}
+
+            .traffic-nav{
+                margin: 0 0 0 650px;
             }
 
-        .widget-container-full {
-                width: 90vw;
-                }
-        .widget-container-half{
-            width: 45vw;
+            .member{
+            border-radius: 50%;
+            height: 45px;
+            margin:15px 12px 0 12px;
+            }
+
+            .line.divider{
+            border-right: 1px solid white;
+            height: 50px; 
+            margin: 12px 0 12px 15px;
+}
+
+          .members-line{
+              width: 90%;
+          }
+
+          .social-grid-container{
+            display: inline-flex;
+            width: 300px;
+            padding: 0;
+            margin: 0;
         }
 
-         
+        .mobile {
+            grid-column: 2 / span 1;
+          }
 
+          .members {
+            grid-column: 1 / span 1;
+          }
+
+          .members + hr {
+            display: none;
+          }
+
+          .recent-activity {
+            grid-column: 2 / span 1;
+          }
+
+          .message{
+            grid-column: 1 / span 1;
+          }
+
+          .message + hr {
+            display: none;
+          }
+
+          .hidden{
+              display: none;
+          }
+
+          .settings{
+            grid-column: 2 / span 1;
+          }
+
+          .daily.divider{
+            border-right: 1px solid grey;
+            height: 300px;
+          }
+
+          .members.divider{
+            border-right: 1px solid grey;
+            height: 400px; 
+          }
+
+          .message.divider{
+            border-right: 1px solid grey;
+            height: 300px; 
+          }
+
+          input{
+            width: 450px;
+            height: 35px;
+            margin-top: 12px;
+        }
+        textarea{
+            width: 450px;
+            height: 150px;
+            margin: 12px 0; 
+        }
+
+        .button-send{
+            width: 450px;
+            height: 40px;
+        }
+
+        select.dropdown{
+            width: 460px;
+            height: 40px;
+            margin: 75px 0 10px 0;
+        }
+
+        .button-save,
+        .button-disabled-cancel{
+            width: 227px;
+            height: 40px;
+        }
+
+        .toggle-one{
+            position: absolute;
+            top: 128%;
+            left: 70%;
+          }
+          
+          .toggle-two{
+            position: absolute;
+            top: 132%;
+            left: 70%;
+          }
+        
+          .text-toggle{
+              display: flex;
+              font-size: 13px;
+              padding-bottom: 20px;
+              margin: 10px 0 0 10px;
+          }
+        
+          .settings-text{
+                margin: 20px 0 0 10px;
+              padding-bottom: 20px;
+          }
 } 

@@ -122,6 +122,7 @@ const dailyChart = new Chart(
     type: 'doughnut',
     data: mobileUsersdata,
     options: {
+      aspectRatio: 1.9,
       plugins:{
        legend:{
          display: true,
