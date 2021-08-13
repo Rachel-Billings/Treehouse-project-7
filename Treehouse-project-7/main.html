@@ -30,8 +30,8 @@
                         <!--NAVIGATION-->
     <nav class="sidebar">
         <a href="#dashboard"><img class="nav-img" src="svgs/home.svg" alt="Home Navigation Icon"></a>
-        <a href="#members"><img class="nav-img" src="svgs/bar-chart.svg" alt="Bar Chart Navigation Icon"></a>
-        <a href="#visits"><img class="nav-img" src="svgs/members.svg" alt="Members Navigation Icon"></a>
+        <a href="#visits"><img class="nav-img" src="svgs/bar-chart.svg" alt="Bar Chart Navigation Icon"></a>
+        <a href="#members"><img class="nav-img" src="svgs/members.svg" alt="Members Navigation Icon"></a>
         <a href="#settings"><img class="nav-img" src="svgs/settings.svg" alt="Settings Navigation Icon"></a>
     </nav>
 
@@ -131,33 +131,27 @@
     <h3>New Members</h3>
     <div class="members-container">
     <img src="images/member-1.jpg" class="profile-image">
-    <div>
-        <p class="members-text">Victoria Chambers</p>
-        <a href="#">victoria.chambers80@example.com</a>
-        <p class="members-text date">10/15/20</p>
-    </div>
+    <p class="members-text">Victoria Chambers</p>
+    <a href="#">victoria.chambers80@example.com</a>
+    <p class=" members-text date">10/15/20</p>
     </div>
     <hr class="members-line">
     
 
         <div class="members-container">
         <img src="images/member-2.jpg" class="profile-image">
-        <div>
         <p class="members-text">Dale Byrd</p>
         <a href="#">dale.byrd52@example.com</a>
         <p class="members-text date">10/15/20</p>
-        </div>
         </div>
         <hr class="members-line">
     
 
             <div class="members-container">
             <img src="images/member-3.jpg" class="profile-image">
-            <div>
             <p class="members-text">Dawn Wood</p>
             <a href="#">dawn.wood16@example.com</a>
             <p class="members-text date">10/15/20</p>
-            </div>
             </div>
             <hr class="members-line">
             
@@ -165,11 +159,9 @@
 
             <div class="members-container">
                 <img src="images/member-4.jpg" class="profile-image">
-                <div>
                 <p class="members-text">Dan Oliver</p>
                 <a href="#">dan.oliver82@example.com</a>
                 <p class="members-text date">10/15/20</p>
-                </div>
                 </div>
             </section>
             <hr>
@@ -178,10 +170,9 @@
     <h3>Recent Activity</h3>
     <div class="recent-activity-container">
     <img src="images/member-1.jpg" class="profile-image">
-    <div>
-    <p class="members-text">Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
-    <p class="members-text">4 hours ago</p> 
-    </div>
+    <p class="members-text">Victoria Chambers commented on <strong>WebApp's SEO Tips</strong>
+    <br>4 hours agao</p>
+    <span class="purple-arrow arrow">&gt;</span>
     </div>
     <hr class="members-line">   
     
@@ -190,10 +181,9 @@
 
         <div class="recent-activity-container">
         <img src="images/member-2.jpg" class="profile-image">
-        <div>
-        <p class="members-text">Dale Byrd liked the post <strong>facebook's changes for 2021</strong></p>
-        <p class="members-text">5 hours ago</p>
-        </div>
+        <p class="members-text">Dale Byrd liked the post <strong>facebook's changes for 2021</strong>
+        <br>5 hours ago</p>
+        <span class="purple-arrow arrow">&gt;</span>
         </div>
         <hr class="members-line">
         
@@ -201,20 +191,18 @@
 
             <div class="recent-activity-container">
             <img src="images/member-3.jpg" class="profile-image">
-            <div>
-            <p class="members-text">Dawn Wood commented on <strong>facebook's changes for 2021</strong></p>
-            <p class="members-text"> 5 hours ago</p>
-            </div>
+            <p class="members-text">Dawn Wood commented on <strong>facebook's changes for 2021</strong>
+            <br>5 hours ago</p>
+            <span class="purple-arrow arrow">&gt;</span>
             </div>
             <hr class="members-line">
 
 
             <div class="recent-activity-container">
                 <img src="images/member-4.jpg" class="profile-image">
-                <div>
-                <p class="members-text">Dan Oliver posted <strong>WebApp's SEO Tips</strong></p>
-                <p class="members-text">1 day ago</p>
-                </div>
+                <p class="members-text">Dan Oliver posted <strong>WebApp's SEO Tips</strong>
+                <br>1 day ago</p>
+                <span class="purple-arrow arrow">&gt;</span>
                 </div>
                 <hr class="hidden">
 
@@ -235,18 +223,22 @@
                                 <!--SETTINGS WIDGET-->
 <section class="settings" id="settings">
     <h3>Settings</h3>
+    <div class="toggle-section">
     <p class="text-toggle">Send Email Notifications</p> 
-    <label class="switch toggle-one">
+    <label class="switch toggle">
         <input type="checkbox" checked>
         <span class="slider round"></span>
       </label>
+    </div>
+
+    <div class="toggle-section">
     <p class="text-toggle settings-text">Set Profile To Public</p>
-    <label class="switch toggle-two">
+    <label class="switch toggle">
         <input type="checkbox">
         <span class="slider round"></span>
       </label>
     </div>
-    </div>
+    
     <div class="form-field">
     <select class="dropdown" id="timezone">
     <option selected>Select a Timezone</option>

@@ -204,6 +204,14 @@ display: flex;
     margin: 0;
 }
 
+/*Recent Activity Arrow*/
+.purple-arrow{
+  color:  rgb(116, 119, 191);
+}
+
+.arrow{
+  visibility: hidden;
+}
 
 
 input{
@@ -335,21 +343,17 @@ display:flex;
     display: block;
   }
 
-  .toggle-one{
-    display: absolute;
-    top: 10px;
-    left: 5px;
-  }
-  
-  .toggle-two{
-    display: absolute;
-    top: 10px;
-    left: 5px;
+.toggle-section{
+  display: flex;
+  justify-content: flex-start;
+}
+
+  .toggle{
+    align-self: center;
   }
 
   .text-toggle{
-      display: inline-flex;
-      font-size: 13px;
+    padding: 0 5px 0 5px;
   }
 
   .settings-text{
@@ -541,7 +545,7 @@ main{
           .message,
           .settings,
           hr {
-            width: 100%;
+            width: calc(100% - 2px);
             grid-column: 1 / span 2;
           }
 
@@ -584,8 +588,12 @@ main{
 
         .members-container{
             display: flex;
-            justify-self: start;
-            padding-left:10px ;
+
+            padding-left:10px;
+        }
+
+         .date{
+          align-self: flex-end;
         }
 
         .members-text, a{
@@ -594,10 +602,17 @@ main{
             padding: 5px 0 0 10px;
         }
 
+        
+
         .recent-activity-container{
-            display: flex;
-            justify-self: start;
-            padding-left:10px ;
+          display: flex;
+        justify-content:left;
+
+        }
+
+        .arrow{
+          visibility: visible;
+          justify-self: flex-end;
         }
 
         input{
@@ -628,27 +643,17 @@ main{
             height: 45px;
         }
 
-        .toggle-one{
-            position: absolute;
-            top: 217%;
-            left: 30%;
-          }
-          
-          .toggle-two{
-            position: absolute;
-            top: 222%;
-            left: 30%;
-          }
-        
-          .text-toggle{
-              display: flex;
-              font-size: 13px;
-              padding-bottom: 20px;
-          }
-        
-          .settings-text{
-              padding-bottom: 20px;
-          }
+        .toggle{
+          align-self: center;
+        }
+      
+        .text-toggle{
+          padding: 0 5px 0 5px;
+        }
+      
+        .settings-text{
+            margin-right:25px ;
+        }
 
           .member{
             border-radius: 50%;
@@ -687,7 +692,7 @@ main{
           .traffic,
           .alert,
           .social {
-            width: 100%;
+            width: calc(100% - 2px);
             grid-column: 1 / span 2;
           }
 
@@ -742,9 +747,25 @@ main{
             display: none;
           }
 
+          .date{
+            align-self: flex-end;
+          }
+
           .recent-activity {
             grid-column: 2 / span 1;
           }
+
+          .recent-activity-container{
+            display: flex;
+           align-content: space-between;
+           width: 400px;
+          }
+
+          .arrow{
+            visibility: visible;
+            justify-self: right;
+          }
+
 
           .message{
             grid-column: 1 / span 1;
@@ -805,27 +826,15 @@ main{
             height: 40px;
         }
 
-        .toggle-one{
-            position: absolute;
-            top: 128%;
-            left: 70%;
-          }
-          
-          .toggle-two{
-            position: absolute;
-            top: 132%;
-            left: 70%;
-          }
-        
-          .text-toggle{
-              display: flex;
-              font-size: 13px;
-              padding-bottom: 20px;
-              margin: 10px 0 0 10px;
-          }
-        
-          .settings-text{
-                margin: 20px 0 0 10px;
-              padding-bottom: 20px;
-          }
+        .toggle{
+          align-self: center;
+        }
+      
+        .text-toggle{
+          padding: 0 5px 0 5px;
+        }
+      
+        .settings-text{
+            margin-right:25px ;
+        }
 } 
