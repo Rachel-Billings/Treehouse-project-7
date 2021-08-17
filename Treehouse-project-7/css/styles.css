@@ -50,8 +50,8 @@ p.header-info{
 
 .profile-image{
     border-radius: 50%;
-    width:70px;
-    height: 70px;
+    width:60px;
+    height:60px;
 }
 
 .member{
@@ -588,30 +588,39 @@ main{
 
         .members-container{
             display:flex;
-            padding-left:10px;
+            padding:0 10px 0 10px;
+            align-items: center;
         }
 
          .date{
           margin-left: auto;
-          justify-self: stretch;
+          align-self: center;
         }
 
-        .members-text, a{
+        .members-text{
             text-align: left;
+            padding: 5px 0 0 10px;
+        }
+
+        .recent-text{
+          text-align: left;
             padding: 5px 0 0 10px;
         }
 
         
 
         .recent-activity-container{
-          display: flex;
+        display: flex;
         justify-content:left;
+        align-items: center;
+        padding:0 10px 0 10px;
 
         }
 
         .arrow{
           visibility: visible;
           margin-left: auto;
+          align-self: center;
         }
 
         input{
@@ -721,6 +730,14 @@ main{
             width: 90%;
         }
 
+        .members-container{
+          display:flex;
+          padding:0 0 0 10px;
+          align-items: center;
+          margin: 5px 0 5px auto;
+          
+      }
+
             .line.divider{
             border-right: 1px solid white;
             height: 50px; 
@@ -747,7 +764,8 @@ main{
           }
 
           .date{
-            margin: 0 5px 0 auto;
+            justify-self: flex-end;
+            margin: 0 10px 0 auto;
           }
 
           .recent-activity {
@@ -756,13 +774,19 @@ main{
 
           .recent-activity-container{
             display: flex;
-           align-content: space-between;
-           width: 400px;
+            padding-left:10px ;
+            align-items: center;
+            margin: 5px 0 5px auto;
+
+          }
+
+          .recent-text{
+            margin: 7px 0;
           }
 
           .arrow{
             visibility: visible;
-            margin-left: auto;
+            align-self: center;
           }
 
           .members-text{
